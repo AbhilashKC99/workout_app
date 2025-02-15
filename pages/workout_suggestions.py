@@ -68,7 +68,7 @@ def main():
     st.title("Weekly Workout Suggestions 💪")
 
     # Load exercise list
-    exercise_list_path = "/Users/abhilash_mac/Documents/Data Projects/Streamlit/App_1/exercises.csv"
+    exercise_list_path = "exercises.csv"
     exercise_list = load_exercise_list(exercise_list_path)
     
     if exercise_list.empty:
