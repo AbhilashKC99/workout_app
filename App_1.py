@@ -78,8 +78,8 @@ def main():
     st.set_page_config(page_title="Workout Tracker", page_icon="🏋️‍♂️")
     
     # Load exercise list and save CSV
-    exercise_list = load_csv("/Users/abhilash_mac/Documents/Data Projects/Streamlit/App_1/exercises.csv")
-    save_csv = load_csv("/Users/abhilash_mac/Documents/Data Projects/Streamlit/App_1/stat_save.csv")
+    exercise_list = load_csv("exercises.csv")
+    save_csv = load_csv("stat_save.csv")
     
     # Clean column names
     save_csv.columns = save_csv.columns.str.strip()
@@ -152,7 +152,7 @@ def main():
                     "Weight": weight
                 }
 
-                stat_save_path = "/Users/abhilash_mac/Documents/Data Projects/Streamlit/App_1/stat_save.csv"
+                stat_save_path = "stat_save.csv"
                 if save_exercise(new_row, stat_save_path):
                     # Remove the logged exercise from the pending list
                     st.session_state.pending_exercises.remove(selected_exercise)
